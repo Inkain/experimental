@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <Button
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:onClick="appyMotion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <android.support.constraint.motion.MotionLayout android:layout_width="0dp"
+                                                    android:layout_height="0dp"
+                                                    android:id="@+id/motion2"
+                                                    app:layout_constraintHeight_percent="0.6"
+                                                    app:layout_constraintHeight_default="percent"
+                                                    app:layout_constraintWidth_percent="1"
+                                                    app:layout_constraintWidth_default="percent"
+                                                    app:layout_constraintTop_toBottomOf="@+id/text"
+                                                    app:layoutDescription="@xml/scene_02"
+                                                    app:showPaths="true"
+    >
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="WatchTV"
+                android:id="@+id/watch"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:id="@+id/container"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintLeft_toLeftOf="parent">
+
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/text1"
+                      android:text="hello"
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="12 40AM-1 50 PM"
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Description ergm;egnegr"
+            />
+        </LinearLayout>
+
+    </android.support.constraint.motion.MotionLayout>
+
+</android.support.constraint.ConstraintLayout>
